@@ -1,46 +1,106 @@
 
 
 
-@media screen and (min-width: 1360px) { 
+@media screen and (min-width: 800px) { 
 
     #layout-forside {
         display: grid;
-        grid-template-areas:  "header header header"
+        grid-template-areas:  "header header nav"
                               "main main main"
                               "footer footer footer";
        grid-template-columns: repeat(3, 1fr); 
       }
+      nav {
+        grid-area: nav;
+        margin: auto;
+      }
 
       header {
         grid-area: header;
-        display: flex;
-        gap: 53%;
       }
 
+      a {
+        text-decoration: none;
+        color: #000; /*Svart overskrift farge*/
+        font-weight: bold;
+      }
    
-      header nav ul {
+      nav ul {
         list-style-type: none; /* Remove default list styling */
-        margin: 0;
+        margin-top: 12%;
         padding: 0;
       /*  overflow: hidden;  Clear floats and prevent container from collapsing */
       }
 
-      header nav ul li {
+      nav ul li {
         float: left; /* Float list items to make them horizontal */
       }
-      header nav ul li a {
-        text-decoration: none;
-        color: #000; /*Svart overskrift farge*/
+      nav ul li a {
         padding: 14px;
-        font-weight: bold;
         font-size: 1.1em;
+      }
+      
+      .header-contact-knapp {
+        background-color: #e6bd43;
+      }
+
+      .header-contact-knapp:hover {
+        color: #e6bd43;
+        background-color: #000;
       }
 
       main {
         grid-area: main;
       }
 
+      main article h1 {
+        font-size: 3em;
+      }
+
+      #headline {
+        padding: 4%;
+        background-color: #d9d9d9;
+        text-align: center;
+      }
+      #headline nav {
+        margin-top: 4%;
+      }
+      #headline nav a {
+        background-color: #e6bd43;
+        padding: 1%;
+      }
+      #headline nav a:hover {
+        background-color: #000;
+        color: #e6bd43;
+        padding: 1%;
+      }
+      
+      main article :not(#headline) {
+        text-align: center;
+      }
+
+      main section {
+        border: 1px solid #000;
+        display: flex;
+      }
+
+      main section article {
+        margin-top: 5%;
+      }
+
       footer {
         grid-area: footer;
+        display: flex;
+        gap: 23%;
+        background-color: #252525;
+      }
+      
+      footer h5 {
+        color: white;
+        font-size: 1.4em;
+      }
+
+      footer nav ul li {
+        color: white;
       }
 }
