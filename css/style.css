@@ -1,5 +1,18 @@
 
 
+main button {
+  position: fixed;
+  width: 50px;
+  height: 100px;
+  background-color: #000;
+  margin-left: 90%;
+  border: none;
+  cursor: pointer;
+}
+main button a {
+  color: white;
+}
+
 
 @media screen and (min-width: 800px) { 
 
@@ -22,7 +35,6 @@
       a {
         text-decoration: none;
         color: #000; /*Svart overskrift farge*/
-        font-weight: bold;
       }
    
       nav ul {
@@ -58,7 +70,7 @@
       }
 
       #headline {
-        padding: 4%;
+        padding: 2%;
         background-color: #d9d9d9;
         text-align: center;
       }
@@ -68,6 +80,7 @@
       #headline nav a {
         background-color: #e6bd43;
         padding: 1%;
+        font-weight: bold;
       }
       #headline nav a:hover {
         background-color: #000;
@@ -75,8 +88,12 @@
         padding: 1%;
       }
       
-      main article :not(#headline) {
+      .center-text {
         text-align: center;
+      }
+
+      main article h2 {
+        font-size: 2em;
       }
 
       main section {
@@ -85,7 +102,45 @@
       }
 
       main section article {
+        margin-top: 2%;
+      }
+
+      main section article h3 {
+        font-size: 2em;
+      }
+
+      main section article nav {
         margin-top: 5%;
+      }
+
+      main section article nav a {
+        border: 3px solid #000;
+        font-weight: bold;
+        font-size: 1em;
+        padding: 1rem;
+      }
+      main h4 {
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      #branding {
+        display: flex;
+        gap: 14%;
+        margin-left: 23%;
+      }
+
+      #branding h5 {
+        font-size: 1.3rem;
+      }
+
+      #links {
+
+      }
+
+      #links ul {
+        margin-top: 0;
       }
 
       footer {

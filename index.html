@@ -8,15 +8,17 @@
     </head>
  <body>
     <div id="layout-forside">
-   <header>
+   <header id="top">
     <figure>
-        <img src="img/logo1.png" alt="logo for header">
+      <a href="index.html">
+        <img href="index.html" src="img/logo1.png" alt="logo for header">
+     </a>
     </figure>
    </header>
 
 <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
+      <li><a style=" text-decoration: underline #e6bd43; font-weight: bold;" href="index.html">Home</a></li>
       <li><a href="products.html">Portfolio</a></li>
       <li><a href="about.html">About</a></li>
       <li><a class="header-contact-knapp" href="#">Contact</a></li>
@@ -31,10 +33,14 @@
         <nav><a href="#">Read more about our services</a></nav>
       </article>
 
-      <article>
+      <article class="center-text">
         <h2>Engaging subheading. What can you help your visitors with</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
       </article>
+
+      <button>
+         <a href="#top">back to</a>
+      </button>
    
       <section>
         <figure>
@@ -43,14 +49,24 @@
         <article>
           <h3>About our company</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+          <nav><a href="#">Read more about us</a></nav>
         </article>
-        <nav></nav>
       </section>
 
-      <nav>
-        <h3></h3>
+
+      <h4>Our Services</h4>
+      <nav id="branding">
+        <h5>Branding</h5>
+        <h5>Design</h5>
+        <h5>Development</h5>
+        <h5>Support</h5>
+      </nav>
+      <nav id="links">
         <ul>
-          <li></li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
         </ul>
       </nav>
 
