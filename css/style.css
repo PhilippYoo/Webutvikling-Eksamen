@@ -38,15 +38,13 @@ main button a {
       }
    
       nav ul {
+        display: flex;
         list-style-type: none; /* Remove default list styling */
         margin-top: 12%;
         padding: 0;
       /*  overflow: hidden;  Clear floats and prevent container from collapsing */
       }
 
-      nav ul li {
-        float: left; /* Float list items to make them horizontal */
-      }
       nav ul li a {
         padding: 14px;
         font-size: 1.1em;
@@ -127,8 +125,8 @@ main button a {
 
       #branding {
         display: flex;
-        gap: 14%;
-        margin-left: 23%;
+        gap: 21%;
+        margin-left: 14%;
       }
 
       #branding h5 {
@@ -141,6 +139,11 @@ main button a {
 
       #links ul {
         margin-top: 0;
+        margin-right: 0px;
+      }
+
+      main fieldset {
+        background-color: #F4F1F1;
       }
 
       footer {
