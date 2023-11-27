@@ -5,23 +5,24 @@
         <title>Forside</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="icon" type="image/x-icon" href="img/logo1_standard-størrelse.png"> <!--Hentet fra W3schools-->
     </head>
  <body>
-    <div id="layout-forside">
+    <div class="layout">
    <header id="top">
     <figure>
       <a href="index.html">
-        <img href="index.html" src="img/logo1.png" alt="logo for header">
+        <img href="index.html" src="img/logo1_små-størrelse.png" alt="logo for header">
      </a>
     </figure>
    </header>
 
-<nav>
+<nav class="header-nav">
     <ul>
-      <li><a style=" text-decoration: underline #e6bd43; font-weight: bold;" href="index.html">Home</a></li>
+      <li><a style="text-decoration: underline #e6bd43; font-weight: bold;" href="index.html">Home</a></li>
       <li><a href="products.html">Portfolio</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a class="header-contact-knapp" href="#">Contact</a></li>
+      <li><a class="header-contact-knapp" href="about.html#contact-form">Contact</a></li>
     </ul>
 </nav>
 
@@ -30,7 +31,7 @@
       <article id="headline">
         <h1>Compeling headline</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-        <nav><a href="#">Read more about our services</a></nav>
+        <a href="#">Read more about our services</a>
       </article>
 
       <article class="center-text">
@@ -42,20 +43,20 @@
          <a href="#top">back to</a>
       </button>
    
-      <section>
+      <section id="om-oss">
         <figure>
           <img src="img/dummy_image.png" alt="dummy bilde for main forside">
         </figure>
         <article>
           <h3>About our company</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-          <nav><a href="#">Read more about us</a></nav>
+          <a href="about.html#about-company">Read more about us</a>
         </article>
       </section>
 
 
       <h4>Our Services</h4>
-      <nav id="branding">
+      <nav id="-forside">
         <h5>Branding</h5>
         <h5>Design</h5>
         <h5>Development</h5>
@@ -75,6 +76,7 @@
         <legend>Sign up for our newsletter</legend>
         <input type="text" id="nyhetsbrev">
         <label for="nyhetsbrev">Sign me up</label>
+
       </fieldset>
 </form>
    </main>
@@ -83,7 +85,7 @@
 
    <footer>
     <figure>
-      <img src="img/logo1.png" alt="footer logo bilde">
+      <img src="img/logo1_små-størrelse.png" alt="footer logo bilde">
     </figure>
     <h5>Company copyright 2023</h5>
     <nav>

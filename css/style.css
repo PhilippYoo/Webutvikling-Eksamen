@@ -16,7 +16,7 @@ main button a {
 
 @media screen and (min-width: 800px) { 
 
-    #layout-forside {
+    .layout {
         display: grid;
         grid-template-areas:  "header header nav"
                               "main main main"
@@ -37,7 +37,7 @@ main button a {
         color: #000; /*Svart overskrift farge*/
       }
    
-      nav ul {
+      .header-nav ul, footer nav ul {
         display: flex;
         list-style-type: none; /* Remove default list styling */
         margin-top: 12%;
@@ -45,7 +45,7 @@ main button a {
       /*  overflow: hidden;  Clear floats and prevent container from collapsing */
       }
 
-      nav ul li a {
+      .header-nav ul li a {
         padding: 14px;
         font-size: 1.1em;
       }
@@ -68,50 +68,41 @@ main button a {
       }
 
       #headline {
-        padding: 2%;
+        padding: 40px;
         background-color: #d9d9d9;
         text-align: center;
       }
-      #headline nav {
-        margin-top: 4%;
-      }
-      #headline nav a {
+      #headline a {
         background-color: #e6bd43;
+        margin-top: 4%;
         padding: 1%;
         font-weight: bold;
       }
-      #headline nav a:hover {
+      #headline a:hover {
         background-color: #000;
         color: #e6bd43;
         padding: 1%;
       }
       
-      .center-text {
+      .center-text, #contact-form h2, #portfolio-overskrift h1 {
         text-align: center;
       }
 
-      main article h2 {
+      main article h2, #om-oss article h3 {
         font-size: 2em;
       }
 
-      main section {
+      #om-oss {
         border: 1px solid #000;
         display: flex;
       }
 
-      main section article {
+      #om-oss article {
         margin-top: 2%;
       }
 
-      main section article h3 {
-        font-size: 2em;
-      }
-
-      main section article nav {
+      #om-oss article a {
         margin-top: 5%;
-      }
-
-      main section article nav a {
         border: 3px solid #000;
         font-weight: bold;
         font-size: 1em;
@@ -123,18 +114,14 @@ main button a {
         text-align: center;
       }
 
-      #branding {
+      #branding-forside {
         display: flex;
         gap: 21%;
         margin-left: 14%;
       }
 
-      #branding h5 {
+      #branding-forside h5 {
         font-size: 1.3rem;
-      }
-
-      #links {
-
       }
 
       #links ul {
@@ -152,6 +139,10 @@ main button a {
         gap: 23%;
         background-color: #252525;
       }
+
+      footer figure {
+        margin: auto;
+      }
       
       footer h5 {
         color: white;
@@ -159,6 +150,94 @@ main button a {
       }
 
       footer nav ul li {
+        margin-left: 3px;
         color: white;
       }
+
+      #clients {
+        background-color: #e6bd43;
+        padding: 18px;
+      }
+      #clients h2 {
+        text-align: center;
+        font-size: 2em;
+      }
+      #clients figure {
+        display: flex;
+        gap: 2%;
+        margin-top: 45px;
+        justify-content: center; /*Hentet fra W3Schools*/
+      }
+
+      #about-company {
+        background-color: palegreen;
+        padding: 45px;
+      }
+
+      #about-company article {
+        background-color: #d9d9d9;
+        width: 45%;
+        margin-left: 55%;
+        padding: 7px;
+        height: 300px;
+      }
+
+      #about-company h1 {
+        font-weight: normal;
+        font-size: 1em;
+        margin-left: 35px;
+        margin-bottom: 10px;
+      }
+
+      #about-company h2 {
+        font-size: 1.7em;
+        margin-left: 35px;
+      }
+
+      #about-company p {
+       margin-left: 35px;
+      }
+
+      #about-company a {
+        background-color: #e6bd43;
+        padding: 10px;
+        font-weight: bold;
+        margin-left: 35px;
+      }
+
+      #contact-form {
+        background-color: #f7f7f7;
+        padding: 25px;
+      }
+
+      #portfolio-overskrift {
+        background-color: #d9d9d9;
+      }
+
+      .portfolio-overskrifter-h2 {
+        border-bottom: 3px solid #e6bd43;
+        padding: 11px;
+        padding-left: 0;
+        margin-left: 5%;
+        width: 87%;
+      }
+
+      #jobs-list {
+        margin-top: 35px;
+      }
+ 
+      #jobs-list ul {
+        display: flex;
+        gap: 1%;
+        padding: 0;
+        margin-left: 5%;
+        list-style-type: none;
+      }
+
+      #jobs-list ul li a {
+        border: 1px solid #000;
+        padding: 8px;
+        font-size: 1.1em;
+      }
+
 }
