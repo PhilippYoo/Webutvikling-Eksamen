@@ -6,24 +6,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="icon" type="image/x-icon" href="img/logo1_standard-størrelse.png"> <!--Hentet fra W3schools-->
+        <script src="https://kit.fontawesome.com/27b238d8e3.js" crossorigin="anonymous"></script>
     </head>
  <body>
 <div class="layout">
+  <button onclick="topFunksjon()" id="knapp" aria-label="Go to top of website" title="click for top">
+    <i class="fa-solid fa-arrow-up fa-2xl" style="color: #ffffff;"></i>
+ </button>
 
         <header id="top">
          <figure>
-           <a href="index.html">
-             <img href="index.html" src="img/logo1_små-størrelse.png" alt="logo for header">
+           <a href="index.html"  aria-label="Navigation to frontpage" title="Click for home">
+             <img src="img/logo1_små-størrelse.png" alt="logo for header">
           </a>
          </figure>
         </header>
      
      <nav class="header-nav">
          <ul>
-           <li><a href="index.html">Home</a></li>
-           <li><a href="products.html">Portfolio</a></li>
-           <li><a style=" text-decoration: underline #e6bd43; font-weight: bold;" href="about.html">About</a></li>
-           <li><a class="header-contact-knapp" href="about.html#contact-form">Contact</a></li>
+           <li><a href="index.html" aria-label="Navigation to frontpage" title="Home">Home</a></li>
+           <li><a href="products.html" aria-label="Navigation to portfolio page" title="Portfolio">Portfolio</a></li>
+           <li><a style=" text-decoration: underline #e6bd43; font-weight: bold;" href="about.html" aria-label="Navigation to about page" title="About">About</a></li>
+           <li><a class="header-contact-knapp" href="about.html#contact-form" aria-label="Navigation to about page contact-form section" title="Contact-form fillout">Contact</a></li>
          </ul>
      </nav>
    
@@ -38,16 +42,13 @@
         </article>
       </section>
 
-      <button>
-        <a href="#top">back to</a>
-     </button>
-
-<article>
-  <h2></h2>
-      <h3></h3>
-      <h3></h3>
-      <h3></h3>
-      <h3></h3>
+<article id="our-services">
+  <h2>Our Services</h2>
+  <i class="fa-solid fa-users"></i>
+      <h3>Branding</h3>
+      <h3>Branding</h3>
+      <h3>Branding</h3>
+      <h3>Branding</h3>
 </article>
 
       <section id="clients">
@@ -62,16 +63,30 @@
 
  <section id="contact-form">
  <h2>Contact us</h2>
+ <div id="wrap">
  <form>
+  <fieldset>
   <h3>Send us a message</h3>
+  <label for="fornavn">Name</label>
+  <input type="text" id="fornavn" placeholder="Ola Nordmann.."><br>
+  <label for="subject">Subject</label>
+  <input type="text" id="subject" placeholder="Branding.."><br>
+  <label for="message">Message</label>
+  <textarea id="message" rows="4" cols="50"></textarea><br>
+  <input id="send-inn-knapp" type="submit" value="Send message">
+  </fieldset>
  </form>
-
  <article>
   <h3>Contact information</h3>
+  <p id="placeholder-tekst">at vero eos et accusam et justo duo dolores et ea rebum. stet clita kasd gubergren, no sea takimata sanctus est lorem curabitur congue rutrum diam.</p>
+  <p><i class="fa-solid fa-location-pin"></i><span>B R A Veien 4, 1757 Halden</span></p>
+  <p><i class="fa-solid fa-phone"></i><span>69 60 80 00</span></p>
+  <p><i class="fa-solid fa-envelope"></i><a id="mail" href="mailto:someone@example.com">Send email</a></p>
  </article>
+</div>
  </section>
 
- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2047.18844106045!2d11.350228377099208!3d59.12924747451803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464412f0d344246f%3A0x4e47f19c99b253b1!2zSMO4Z3Nrb2xlbiBpIMOYc3Rmb2xk!5e0!3m2!1sno!2sno!4v1701056311576!5m2!1sno!2sno" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ <iframe title="Google map over the location of the business" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2047.18844106045!2d11.350228377099208!3d59.12924747451803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464412f0d344246f%3A0x4e47f19c99b253b1!2zSMO4Z3Nrb2xlbiBpIMOYc3Rmb2xk!5e0!3m2!1sno!2sno!4v1701056311576!5m2!1sno!2sno" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
 
@@ -81,18 +96,30 @@
 
    <footer>
     <figure>
+      <a href="index.html" aria-label="Link to frontpage" title="Click for home">
       <img src="img/logo1_små-størrelse.png" alt="footer logo bilde">
+    </a>
     </figure>
-    <h5>Company copyright 2023</h5>
+    <h5>Companyrights companyname 2023</h5>
     <nav>
       <ul>
-      <li>Facebook</li>
-      <li>Instagram</li>
-      <li>Linkedin</li>
+        <li><a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook" aria-label="Link to facebook page" title="Facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram" aria-label="Link to instagram page" title="Instagram"></i></a></li>
+        <li><a href="https://no.linkedin.com/"><i class="fa-brands fa-linkedin" aria-label="Link to linkedin page" title="Linkedin"></i></a></li>
     </ul>
     </nav>
    </footer>
 
 </div>
+
+<script>
+  let mybutton = document.getElementById("knapp");
+
+  function topFunksjon() { //Hentet fra W3schools https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top
+     location.href = "#top";
+  } 
+</script>
+
+
 </body>
 </html>

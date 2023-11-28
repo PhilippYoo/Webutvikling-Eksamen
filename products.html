@@ -6,23 +6,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="icon" type="image/x-icon" href="img/logo1_standard-størrelse.png"> <!--Hentet fra W3schools-->
+        <script src="https://kit.fontawesome.com/27b238d8e3.js" crossorigin="anonymous"></script>
     </head>
  <body>
 <div class="layout">
+  <button onclick="topFunksjon()" id="knapp" aria-label="Go to top of website" title="click for top">
+    <i class="fa-solid fa-arrow-up fa-2xl" style="color: #ffffff;"></i>
+ </button>
     <header id="top">
         <figure>
-          <a href="index.html">
-            <img href="index.html" src="img/logo1_små-størrelse.png" alt="logo for header">
+          <a href="index.html" aria-label="Navigation to frontpage" title="Click for home">
+            <img src="img/logo1_små-størrelse.png" alt="logo for header">
          </a>
         </figure>
        </header>
 
        <nav class="header-nav">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a style="text-decoration: underline #e6bd43; font-weight: bold;" href="products.html">Portfolio</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a class="header-contact-knapp" href="about.html#contact-form">Contact</a></li>
+          <li><a href="index.html" aria-label="Navigation to frontpage" title="Home">Home</a></li>
+          <li><a style="text-decoration: underline #e6bd43; font-weight: bold;" href="products.html" aria-label="Navigation to portfolio page" title="Portfolio">Portfolio</a></li>
+          <li><a href="about.html" aria-label="Navigation to about page" title="About">About</a></li>
+          <li><a class="header-contact-knapp" href="about.html#contact-form" aria-label="Navigation to about page contact-form section" title="Contact-form fillout">Contact</a></li>
         </ul>
     </nav>
     <main>
@@ -32,35 +36,33 @@
       </figure>
 
       <h2 class="portfolio-overskrifter-h2">Explore previous jobs</h2>
-      <button>
-        <a href="#top">back to</a>
-     </button>
+
       <nav id="jobs-list">
         <ul>
-            <li><a href="#Branding">Branding</a></li>
-            <li><a href="#Design">Design</a></li>
-            <li><a href="#Development">Development</a></li>
+            <li><a href="#Branding" aria-label="Navigation to Branding section" title="Navigate to Branding?">Branding</a></li>
+            <li><a href="#Design" aria-label="Navigation to Design section" title="Navigate to Design?">Design</a></li>
+            <li><a href="#Development" aria-label="Navigation to Development section" title="Navigate to Development?">Development</a></li>
         </ul>
       </nav>
       <h2 id="Branding" class="portfolio-overskrifter-h2">Branding</h2>
-      <section></section>
+      <section id="Branding-section"></section>
       <h2 id="Design" class="portfolio-overskrifter-h2">Design</h2>
-      <section>
+      <section id="Design-section">
         <figure>
              <img class="artikkelkort" src="img/dummy_image.png" alt="">
-             <figcaption>ww</figcaption>
+             <figcaption>Et harum quidem</figcaption>
         </figure>
         <figure>
             <img class="artikkelkort" src="img/dummy_image.png" alt="">
-            <figcaption>ww</figcaption>
+            <figcaption>Et harum quidem</figcaption>
         </figure>
         <figure>
               <img class="artikkelkort" src="img/dummy_image.png" alt="">
-              <figcaption>ww</figcaption>
+              <figcaption>Et harum quidem</figcaption>
         </figure>
       </section>
       <h2 id="Development" class="portfolio-overskrifter-h2">Development</h2>
-      <section></section>
+      <section id="Development-section"></section>
 
 
 
@@ -69,17 +71,30 @@
     </main>
     <footer>
         <figure>
+          <a href="index.html" aria-label="Link to frontpage" title="Click for home">
           <img src="img/logo1_små-størrelse.png" alt="footer logo bilde">
+        </a>
         </figure>
-        <h5>Company copyright 2023</h5>
+        <h5>Companyrights companyname 2023</h5>
         <nav>
           <ul>
-          <li>Facebook</li>
-          <li>Instagram</li>
-          <li>Linkedin</li>
+            <li><a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook" aria-label="Link to facebook page" title="Facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram" aria-label="Link to instagram page" title="Instagram"></i></a></li>
+            <li><a href="https://no.linkedin.com/"><i class="fa-brands fa-linkedin" aria-label="Link to linkedin page" title="LinkedIn"></i></a></li>
         </ul>
         </nav>
        </footer>
 </div>
+
+
+<script>
+  let mybutton = document.getElementById("knapp");
+
+  function topFunksjon() { //Hentet fra W3schools https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top
+     location.href = "#top";
+  } 
+</script>
+
+
 </body>
 </html>

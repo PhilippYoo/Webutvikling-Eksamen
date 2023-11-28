@@ -6,23 +6,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="icon" type="image/x-icon" href="img/logo1_standard-størrelse.png"> <!--Hentet fra W3schools-->
+        <script src="https://kit.fontawesome.com/27b238d8e3.js" crossorigin="anonymous"></script>
     </head>
  <body>
     <div class="layout">
+      <button onclick="topFunksjon()" id="knapp" aria-label="Go to top of website" title="click for top">
+        <i class="fa-solid fa-arrow-up fa-2xl" style="color: #ffffff;"></i>
+     </button>
    <header id="top">
     <figure>
-      <a href="index.html">
-        <img href="index.html" src="img/logo1_små-størrelse.png" alt="logo for header">
+      <a href="index.html"  aria-label="Navigation to frontpage" title="Click for home">
+        <img src="img/logo1_små-størrelse.png" alt="logo for header">
      </a>
     </figure>
    </header>
 
 <nav class="header-nav">
     <ul>
-      <li><a style="text-decoration: underline #e6bd43; font-weight: bold;" href="index.html">Home</a></li>
-      <li><a href="products.html">Portfolio</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a class="header-contact-knapp" href="about.html#contact-form">Contact</a></li>
+      <li><a style="text-decoration: underline #e6bd43; font-weight: bold;" href="index.html" aria-label="Navigation to frontpage" title="Home">Home</a></li>
+      <li><a href="products.html" aria-label="Navigation to portfolio page" title="Portfolio">Portfolio</a></li>
+      <li><a href="about.html" aria-label="Navigation to about page" title="About">About</a></li>
+      <li class="bunn-li" aria-label="Navigation to about page contact-form section" title="Contact-form fillout"><a class="header-contact-knapp" href="about.html#contact-form">Contact</a></li>
     </ul>
 </nav>
 
@@ -31,17 +35,13 @@
       <article id="headline">
         <h1>Compeling headline</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-        <a href="#">Read more about our services</a>
+        <a href="#Services">Read more about our services</a>
       </article>
 
       <article class="center-text">
         <h2>Engaging subheading. What can you help your visitors with</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
       </article>
-
-      <button>
-         <a href="#top">back to</a>
-      </button>
    
       <section id="om-oss">
         <figure>
@@ -55,28 +55,59 @@
       </section>
 
 
-      <h4>Our Services</h4>
-      <nav id="-forside">
+      <h4 id="Services">Our Services</h4>
+      <article>
+        <ul>
+          <li><i class="fa-solid fa-users"></i></li>
+          <li><h5>Branding</h5></li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+        </ul>
+        <ul>
+          <li> <i class="fa-solid fa-cloud-arrow-up"></i></li>
+          <li> <h5>Design</h5></li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+        </ul>
+        <ul>
+          <li> <i class="fa-solid fa-code"></i></li>
+          <li><h5>Development</h5></li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+        </ul>
+        <ul>
+          <li> <i class="fa-solid fa-wifi"></i></li>
+          <li><h5>Support</h5></li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+        </ul>
+      </article>
+<!--
+      <figure id="icons">
+        <i class="fa-solid fa-users"></i>
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+        <i class="fa-solid fa-code"></i>
+        <i class="fa-solid fa-wifi"></i>
+      </figure>
+      <article id="branding-forside">
         <h5>Branding</h5>
         <h5>Design</h5>
         <h5>Development</h5>
         <h5>Support</h5>
-      </nav>
-      <nav id="links">
+      </article>
+      <article id="links">
         <ul>
           <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
           <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
           <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
           <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
         </ul>
-      </nav>
+      </article>
+    -->
 
 <form>
-      <fieldset>
-        <legend>Sign up for our newsletter</legend>
-        <input type="text" id="nyhetsbrev">
-        <label for="nyhetsbrev">Sign me up</label>
-
+      <fieldset id="forside-fieldset">
+        <label for="nyhetsbrev">Sign up for our newsletter</label>
+        <div>
+        <input type="text" id="nyhetsbrev" placeholder="Nora@epost.no">
+        <input type="submit" value="Sign me up">
+      </div>
       </fieldset>
 </form>
    </main>
@@ -85,17 +116,29 @@
 
    <footer>
     <figure>
+      <a href="index.html" aria-label="Link to frontpage" title="Click for home">
       <img src="img/logo1_små-størrelse.png" alt="footer logo bilde">
+      </a>
     </figure>
-    <h5>Company copyright 2023</h5>
+    <h5>Companyrights companyname 2023</h5>
     <nav>
       <ul>
-      <li>Facebook</li>
-      <li>Instagram</li>
-      <li>Linkedin</li>
+      <li><a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook" aria-label="Link to facebook page" title="Facebook"></i></a></li>
+      <li><a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram" aria-label="Link to instagram page" title="Instagram"></i></a></li>
+      <li><a href="https://no.linkedin.com/"><i class="fa-brands fa-linkedin" aria-label="Link to linkedin page" title="Linkedin"></i></a></li>
     </ul>
     </nav>
    </footer>
 </div>
+
+<script>
+  let mybutton = document.getElementById("knapp");
+
+  function topFunksjon() { //Hentet fra W3schools https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top
+     location.href = "#top";
+  } 
+</script>
+
+
 </body>
 </html>

@@ -1,20 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  max-width: 1600px; /*Max-width for nettstedet*/
+}
 
-main button {
+button {
   position: fixed;
   width: 50px;
-  height: 100px;
+  height: 70px;
   background-color: #000;
-  margin-left: 90%;
+  right: 20px;
+  bottom: 20px;
+  z-index: 100;
   border: none;
   cursor: pointer;
-}
-main button a {
-  color: white;
-}
+} 
 
 
-@media screen and (min-width: 800px) { 
+@media screen and (min-width: 800px) and (max-width: 1600px)  { /*Max-width for desktop media query*/
 
     .layout {
         display: grid;
@@ -22,6 +26,7 @@ main button a {
                               "main main main"
                               "footer footer footer";
        grid-template-columns: repeat(3, 1fr); 
+       max-width: 1600px; /*Max-width for grid etter slutter grid*/
       }
       nav {
         grid-area: nav;
@@ -32,7 +37,7 @@ main button a {
         grid-area: header;
       }
 
-      a {
+      a:not(#mail,.header-contact-knapp) {
         text-decoration: none;
         color: #000; /*Svart overskrift farge*/
       }
@@ -52,11 +57,14 @@ main button a {
       
       .header-contact-knapp {
         background-color: #e6bd43;
+        font-weight: bold;
+        color: #000;
+        text-decoration: none;
       }
 
       .header-contact-knapp:hover {
         color: #e6bd43;
-        background-color: #000;
+        background-color: #252525;
       }
 
       main {
@@ -79,12 +87,12 @@ main button a {
         font-weight: bold;
       }
       #headline a:hover {
-        background-color: #000;
+        background-color: #252525;
         color: #e6bd43;
         padding: 1%;
       }
       
-      .center-text, #contact-form h2, #portfolio-overskrift h1 {
+      .center-text, #contact-form h2, #portfolio-overskrift h1, #our-services h2 {
         text-align: center;
       }
 
@@ -95,6 +103,7 @@ main button a {
       #om-oss {
         border: 1px solid #000;
         display: flex;
+        background-color: #e6bd43;
       }
 
       #om-oss article {
@@ -116,12 +125,28 @@ main button a {
 
       #branding-forside {
         display: flex;
-        gap: 21%;
-        margin-left: 14%;
+        gap: 15%;
+        justify-content: center;
+      }
+
+      #forside-fieldset div { /*text-align center for inline-block element input field*/
+        text-align: center;
+        margin-top: 10px;
       }
 
       #branding-forside h5 {
-        font-size: 1.3rem;
+        font-size: 1.3em;
+      }
+
+      iframe {
+        width: 100%;
+        height: 300px;
+        border: 0;
+      }
+
+      #icons {
+        display: flex;
+        font-size: 3rem;
       }
 
       #links ul {
@@ -129,8 +154,36 @@ main button a {
         margin-right: 0px;
       }
 
-      main fieldset {
+      #links ul li {
+        list-style-type: none;
+      }
+
+      #forside-fieldset {
         background-color: #F4F1F1;
+        padding: 30px;
+        border: 0;
+      }
+
+      #forside-fieldset label {
+        text-align: center;
+        display: block;
+        font-weight: bold;
+        font-size: 1.7em;
+      }
+      #nyhetsbrev {
+          width: 200px;
+          padding: 12px 20px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: 0;
+      }
+      #forside-fieldset input:not(#nyhetsbrev) {
+        background-color: #e6bd43;
+        border: 0;
+        font-weight: bold;
+        font-size: 0.8em;
+        padding: 12px;
+        cursor: pointer;
       }
 
       footer {
@@ -138,6 +191,7 @@ main button a {
         display: flex;
         gap: 23%;
         background-color: #252525;
+        padding: 30px;
       }
 
       footer figure {
@@ -145,13 +199,15 @@ main button a {
       }
       
       footer h5 {
-        color: white;
+        color: #FFF;
         font-size: 1.4em;
+        font-weight: lighter;
       }
 
-      footer nav ul li {
-        margin-left: 3px;
-        color: white;
+      footer nav ul li a i {
+        margin-left: 14px;
+        color: #FFF;
+        font-size: 2.2rem;
       }
 
       #clients {
@@ -170,12 +226,13 @@ main button a {
       }
 
       #about-company {
-        background-color: palegreen;
+        background-image: url("../img/pixabay-about.jpg");
         padding: 45px;
       }
 
       #about-company article {
         background-color: #d9d9d9;
+        background-color: rgba(255, 255, 255, 0.5); /*Alpha verdi*/
         width: 45%;
         margin-left: 55%;
         padding: 7px;
@@ -198,6 +255,45 @@ main button a {
        margin-left: 35px;
       }
 
+      #wrap form fieldset, #wrap form fieldset input, #wrap form fieldset textarea {
+        border: 0;
+      }
+
+      #wrap article {
+        margin-left: 2%;
+      }
+
+      #wrap form fieldset label {
+        padding: 6px;
+        padding-left: 0;
+        display: block;
+      }
+
+      #mail, #wrap article p span {
+        margin-left: 15px;
+      }
+
+      #send-inn-knapp {
+        font-weight: bold;
+        padding: 15px;
+        background-color: #e6bd43;
+        margin-top: 5px;
+      }
+
+      #fornavn {
+         padding: 10px;
+         width: 94%;
+      }
+
+      #subject {
+        padding: 10px;
+        width: 94%;
+      }
+
+      #placeholder-tekst {
+            width: 55%;
+      }
+
       #about-company a {
         background-color: #e6bd43;
         padding: 10px;
@@ -211,7 +307,11 @@ main button a {
       }
 
       #portfolio-overskrift {
-        background-color: #d9d9d9;
+        background-image: url("../img/portfolio-background.jpg");
+        display: grid;
+        place-items: center; /*Både for grid og place-items hentet fra OpenAI*/
+        padding: 45px;
+        height: 300px;
       }
 
       .portfolio-overskrifter-h2 {
@@ -240,4 +340,176 @@ main button a {
         font-size: 1.1em;
       }
 
+      #jobs-list ul li a:hover {
+        background-color: #252525;
+        color: #e6bd43;
+        padding: 8px;
+        font-size: 1.1em;
+      }
+
+      .artikkelkort {
+        max-width: 350px;
+        min-width: 200px;
+      }
+      #wrap {
+        display: flex;
+      }
+
+}
+@media only screen and (max-width: 600px){
+  .layout {
+    display: grid;
+    grid-template-areas:  "header"
+                          "nav"
+                          "main"
+                          "footer"; 
+  }
+
+
+  header {
+    margin: auto;
+    grid-area: header;
+    padding-left: 1%;
+  }
+
+  .header-nav {
+    margin: auto;
+  }
+
+  .header-nav ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+  }
+
+  .header-nav ul li:not(.bunn-li) {
+   padding: 10%;
+   text-align: center;
+   padding-right: 0;
+  }
+
+  .bunn-li {
+    margin-top: 12%;
+  }
+
+  .header-contact-knapp {
+    padding: 10%;
+    background-color: #e6bd43;
+    font-weight: bold;
+  }
+
+
+  .header-nav ul li a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  footer {
+    background-color: #252525;
+    text-align: center;
+  }
+
+  footer h5 {
+    color: #FFF;
+    font-weight: normal;
+  }
+
+  footer nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    padding: 0;
+  }
+
+  footer nav ul li a {
+    color: #FFF;
+    font-size: 2rem;
+  }
+
+  #forside-fieldset div { /*text-align center for inline-block element input field*/
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  #forside-fieldset input:not(#nyhetsbrev) {
+    background-color: #e6bd43;
+    border: 0;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding: 12px;
+    cursor: pointer;
+  }
+
+  #headline {
+    background-image: url("../img/Mobile-frontpage.jpg");
+    text-align: center;
+    margin-top: 10%;
+    display: grid;
+    place-items: center;
+  }
+
+  #headline p {
+    width: 70%;
+  }
+
+  #headline a {
+    padding: 5px;
+    border: 1px solid #000;
+  }
+
+  #om-oss {
+    background-color: #e6bd43;
+    padding: 8% 0;
+    text-align: center;
+  }
+
+  #om-oss figure img {
+    max-width: 100%;
+  }
+
+  #om-oss article {
+    padding: 1.5% 15%;
+  }
+
+  #om-oss article a {
+    padding: 5px;
+    border: 3px solid #000;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+
+  .center-text {
+    text-align: center;
+    margin: auto;
+    padding: 10%;
+  }
+  
+
+  #forside-fieldset {
+    background-color: #F4F1F1;
+    padding: 30px;
+    border: 0;
+    margin: 0;
+  }
+
+  #nyhetsbrev {
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+  #forside-fieldset label {
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    font-size: 1.7em;
+  }
+
+
+
+      
 }
