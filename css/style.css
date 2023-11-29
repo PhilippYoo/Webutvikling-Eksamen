@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap'); /*Open Sans font hentet fra google fonts*/
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -9,7 +9,7 @@ button {
   position: fixed;
   width: 50px;
   height: 70px;
-  background-color: #000;
+  background-color: #000; /*Deler av koden hentet fra W3Schools https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top*/
   right: 20px;
   bottom: 20px;
   z-index: 100;
@@ -18,7 +18,7 @@ button {
 } 
 
 
-@media screen and (min-width: 800px) and (max-width: 1600px)  { /*Max-width for desktop media query*/
+@media screen and (min-width: 600px) and (max-width: 1600px)  { /*Max-width for desktop media query*/
 
     .layout {
         display: grid;
@@ -37,6 +37,8 @@ button {
         grid-area: header;
       }
 
+    
+
       a:not(#mail,.header-contact-knapp) {
         text-decoration: none;
         color: #000; /*Svart overskrift farge*/
@@ -47,7 +49,6 @@ button {
         list-style-type: none; /* Remove default list styling */
         margin-top: 12%;
         padding: 0;
-      /*  overflow: hidden;  Clear floats and prevent container from collapsing */
       }
 
       .header-nav ul li a {
@@ -76,7 +77,7 @@ button {
       }
 
       #headline {
-        padding: 40px;
+        padding: 40px 14%;
         background-color: #d9d9d9;
         text-align: center;
       }
@@ -85,15 +86,28 @@ button {
         margin-top: 4%;
         padding: 1%;
         font-weight: bold;
-      }
+      }      
+
+
       #headline a:hover {
         background-color: #252525;
         color: #e6bd43;
         padding: 1%;
       }
       
-      .center-text, #contact-form h2, #portfolio-overskrift h1, #our-services h2 {
+      #contact-form h2, #our-services h2 {
         text-align: center;
+      }
+
+      #portfolio-overskrift h1 {
+        padding: 20px;
+        text-align: center;
+        font-size: 2rem;
+      }
+
+      .center-text {
+        text-align: center;
+        padding: 0 15%;
       }
 
       main article h2, #om-oss article h3 {
@@ -101,13 +115,26 @@ button {
       }
 
       #om-oss {
-        border: 1px solid #000;
         display: flex;
         background-color: #e6bd43;
+        padding: 3rem 0;
+      }
+
+      #om-oss figure {
+        min-width: 300px;
+      }
+
+      #om-oss figure img {
+        width: 100%;
       }
 
       #om-oss article {
         margin-top: 2%;
+      }
+
+      #om-oss article p {
+        padding-bottom: 30px;
+        padding-right: 10%;
       }
 
       #om-oss article a {
@@ -142,6 +169,29 @@ button {
         width: 100%;
         height: 300px;
         border: 0;
+      }
+
+      .services-icons {
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .services-icons ul {
+        list-style-type: none;
+        padding: 0;
+        max-width: 202px;
+      }
+      .services-icons ul li i {
+        font-size: 2rem;
+      }
+      .services-icons ul li h5 {
+        font-size: 1.2em;
+      }
+
+      .services-dummytekst {
+        max-width: 300px;
       }
 
       #icons {
@@ -189,7 +239,7 @@ button {
       footer {
         grid-area: footer;
         display: flex;
-        gap: 23%;
+        justify-content: space-evenly;
         background-color: #252525;
         padding: 30px;
       }
@@ -231,12 +281,14 @@ button {
       }
 
       #about-company article {
-        background-color: #d9d9d9;
+        content: "";
+        clear: both; /*Kode fra content til display table hentet fra W3schools Clearfix*/
+        display: table;
         background-color: rgba(255, 255, 255, 0.5); /*Alpha verdi*/
-        width: 45%;
+        max-width: 43%;
         margin-left: 55%;
-        padding: 7px;
-        height: 300px;
+        padding: 4%;
+        max-height: 300px;
       }
 
       #about-company h1 {
@@ -297,6 +349,8 @@ button {
       #about-company a {
         background-color: #e6bd43;
         padding: 10px;
+        width: 165px;
+        display: block;
         font-weight: bold;
         margin-left: 35px;
       }
@@ -306,13 +360,36 @@ button {
         padding: 25px;
       }
 
-      #portfolio-overskrift {
-        background-image: url("../img/portfolio-background.jpg");
+      #Branding-section {
         display: grid;
-        place-items: center; /*Både for grid og place-items hentet fra OpenAI*/
-        padding: 45px;
-        height: 300px;
+        justify-content: space-evenly;
+        gap: 10px; 
+        grid-template-columns: 1fr 1fr 1fr;
       }
+
+      .grow {
+        min-width: 200px;
+        max-width: 350px;
+      }
+      #big-image {
+        flex-grow: 3;
+      }
+
+      #big-image {
+        display: block;
+      }
+
+      #portfolio-overskrift {                 /*Kode hentet fra OpenAI*/
+        padding: 100px;
+        background: url('../img/portfolio-background.jpg'); /* Replace with your background image URL */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000; /* Black text color */
+      }
+
 
       .portfolio-overskrifter-h2 {
         border-bottom: 3px solid #e6bd43;
@@ -320,6 +397,7 @@ button {
         padding-left: 0;
         margin-left: 5%;
         width: 87%;
+        font-size: 2vw;
       }
 
       #jobs-list {
@@ -337,20 +415,37 @@ button {
       #jobs-list ul li a {
         border: 1px solid #000;
         padding: 8px;
-        font-size: 1.1em;
+        font-size: 1.5vw;
       }
 
       #jobs-list ul li a:hover {
         background-color: #252525;
         color: #e6bd43;
         padding: 8px;
-        font-size: 1.1em;
+        font-size: 1.5vw;
       }
 
-      .artikkelkort {
-        max-width: 350px;
-        min-width: 200px;
+      #Branding-section article img, #Design-section article img, #Development-section article img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
       }
+
+      #Development-section, #Design-section {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      #Design-section {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10px;
+      }
+      
+      #Branding article h3, #Design article h3, #Development article h3 {
+        font-size: 1rem;
+      }
+
       #wrap {
         display: flex;
       }
@@ -447,6 +542,7 @@ button {
     margin-top: 10%;
     display: grid;
     place-items: center;
+    padding: 10% 0;
   }
 
   #headline p {
@@ -454,8 +550,37 @@ button {
   }
 
   #headline a {
-    padding: 5px;
-    border: 1px solid #000;
+    padding: 4%;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    background-color: #e6bd43;
+  }
+
+  #Services {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .services-icons {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .services-icons ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 196px;
+  }
+
+  .services-icons ul h5 {
+    font-size: 1em;
+  }
+
+  .services-icons ul li i {
+    font-size: 2em;
   }
 
   #om-oss {
@@ -463,6 +588,7 @@ button {
     padding: 8% 0;
     text-align: center;
   }
+  
 
   #om-oss figure img {
     max-width: 100%;
@@ -509,7 +635,94 @@ button {
     font-size: 1.7em;
   }
 
+  #about-company {
+    background-image: url("../img/pixabay-about.jpg");
+    margin-top: 1.3rem;
+    padding: 2rem;
+  }
+
+  #about-company article {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem 5rem;
+  }
+
+  #about-company article h1 {
+    font-size: 1em;
+    font-weight: normal;
+  }
+
+  #about-company article a {
+    text-decoration: none;
+    background-color: #e6bd43;
+    color: #000;
+    font-weight: bold;
+    padding: 1rem;
+  }
 
 
-      
+  #clients {
+    background-color: #e6bd43;
+    padding: 10% 0;
+  }
+
+  #clients figure {
+    display: grid;
+    grid-template-areas: "venstre" "Høyre"
+                         "bunn" "bunn";
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #venstre {
+    grid-area: venstre;
+  }
+
+  #høyre {
+    grid-area: høyre;
+  }
+
+  #bunn {
+    grid-area: bunn;
+  }
+
+
+  #contact-form {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+  }
+
+  #clients h2, #contact-form h2, #Branding, #Design, #Development {
+    text-align: center;
+  }
+
+  #Branding-section, #Design-section, #Development-section {
+    text-align: center;
+  }
+
+
+  #portfolio-overskrift {
+    background-image: url("../img/portfolio-background.jpg");
+    padding: 20%;
+  }
+
+  #portfolio-overskrift h1 {
+    text-align: center;
+  }
+
+  #wrap form fieldset {
+    border: none;
+  }
+
+  #wrap article {
+    padding: 0 1rem;
+  }
+
+  #wrap article p span, #wrap article p a {
+    margin-left: 0.3em;
+  }
+
+  iframe {
+    border: 0;
+    width: 100%;
+    min-height: 300px;
+  }      
 }
