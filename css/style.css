@@ -78,7 +78,7 @@ button {
 
       #headline {
         padding: 40px 14%;
-        background-color: #d9d9d9;
+        background-image: url("../img/Bakgrunn-forside.jpg");
         text-align: center;
       }
       #headline a {
